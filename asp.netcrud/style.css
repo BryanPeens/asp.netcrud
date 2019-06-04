@@ -1,0 +1,73 @@
+﻿/** {
+    border: 1px solid red;
+}*/
+
+body {
+    padding: 20px;
+}
+
+body .webCamContainer {
+    /*background-color: lightblue;*/
+    float: left;
+}
+.webCamContainer {
+    display:inline-block;
+}
+.w3-row {
+    float:right;
+}
+
+
+.mainContainer {
+    border:2px solid black;
+    width:960px;
+    margin: 0 auto;
+    /*background-color:lightcyan;*/
+}
+.leftDiv {
+    border: 2px solid green;
+    height: 700px;
+    width: 500px;
+    float:left;
+}
+.rightDiv {
+    border: 2px solid purple;
+    height: 700px;
+    width: 500px;
+    float:left;
+}
+
+
+.containerMain {
+    height: auto;
+    width: 100%;
+    background: #007bbf;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+
+.boxMain {
+    width: 40%;
+    height: 600px;
+    background: yellow;
+    margin: 20px;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+
+
+
+@media screen and (max-width:1200px) {
+    .boxMain {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .boxMain {
+        width: 90%;
+    }
+}

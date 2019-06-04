@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <div class="webCamContainer">
+        <div class="w3-row">
+            <div class="w3-col-m8">
+                <div id="mywebcam"></div>
+                <p>
+                    <button onclick="captureImage()" class="w3-button w3-blue">Capture Image</button>
+                </p>
+            </div>
+            <div class="w3-col-m4">
+                <div id="results">Your captured image here</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="webcam.min.js"></script>
+    <script src="webcam.js"></script>
+    <script>
+        Webcam.set({
+            width: 400,
+            height: 250,
+            image_format: 'jpeg',
+            jpeg_quality: 90
+        })
+        Webcam.attach('mywebcam')
+
+
+        function captureImage() {
+            Webcam.snap(function (data_uri) {
+                document.getElementById('results').innerHTML = "<h2>Here is your image:</h2><img width='400' height='250' src='" + data_uri + "'>";
+            })
+        }
+
+    </script>
+</body>
+</html>
